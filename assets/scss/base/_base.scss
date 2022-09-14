@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 *,
 *::after,
@@ -6,6 +6,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+span {
+  margin: 0;
+  padding: 0;
+}
+img{
+  object-fit: cover;
+  max-width: 100%;
 }
 html {
   font-size: 62.5%;

@@ -1,0 +1,74 @@
+@use '../abstracts/mixins' as *;
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  @include grid;
+  gap: 0 5rem;
+
+  &__title {
+    grid-column: 1/-1;
+    margin: 6rem 0;
+  }
+  &__info {
+    &__description {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      h3 {
+        margin-top: 1rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        @include font-title-description;
+      }
+      p {
+        @include font-text-description;
+        line-height: 1.8;
+      }
+      a {
+        @include section-link;
+      }
+    }
+  }
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    position: relative;
+    max-width: 60rem;
+    height: 20rem;
+
+    .nat--1 {
+      @include img-settings;
+      grid-row: 1;
+      grid-column: 1/12;
+      position: absolute;
+
+      &:hover {
+        @include img-hover;
+      }
+    }
+    .nat--2 {
+      @include img-settings;
+      grid-row: 6;
+      grid-column: 10;
+      position: absolute;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        @include img-hover;
+      }
+    }
+    .nat--3 {
+      @include img-settings;
+      grid-row: 14;
+      grid-column: 5/16;
+      position: absolute;
+
+      &:hover {
+        @include img-hover;
+      }
+    }
+  }
+}
