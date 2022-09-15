@@ -5,15 +5,15 @@
   background-color: $color-grey-light-1;
   margin-top: -20rem;
   padding-top: 20rem;
-  padding-bottom: 30rem;
-  
+  box-shadow:  0 400px 0 $color-grey-light-1;
 
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
     gap: 0 5rem;
-    @include grid;
+    @include container-size;
+    padding: 0 6rem;
 
     &__title {
       grid-column: 1/-1;
@@ -47,7 +47,6 @@
       max-width: 100%;
       height: 20rem;
       align-items: center;
-
 
       .nat--1 {
         @include img-settings;

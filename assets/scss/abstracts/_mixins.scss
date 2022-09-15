@@ -1,5 +1,4 @@
-@use "../abstracts/variables" as *;
-
+@use '../abstracts/variables' as *;
 
 @mixin font-title-description {
   font-size: $default-font-size;
@@ -10,7 +9,7 @@
   font-size: $default-font-size;
   color: $color-grey-dark-2;
   max-width: 75ch;
-  min-width: 30ch;
+ 
 }
 @mixin section-link {
   color: $color-primary-dark;
@@ -21,7 +20,7 @@
   font-size: $default-font-size;
   text-decoration: none;
 }
-@mixin grid {
+@mixin container-size {
   max-width: 160rem;
   margin: 0 auto;
 }
@@ -31,8 +30,8 @@
 @mixin img-hover {
   outline: 2rem solid $color-primary;
   outline-offset: 2rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   z-index: 1;
   transform: scale(1.05) translateY(-0.5rem);
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
