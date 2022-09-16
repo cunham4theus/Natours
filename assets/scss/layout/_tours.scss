@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.tours {
+  display: grid;
+  background-color: $color-grey-light-1;
+  margin-top: -25rem;
+  padding-top: 30rem;
+  padding-bottom: 12rem;
+
+  h2 {
+    margin-bottom: 12rem;
+  }
+
+  &__cards {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    @include container-size;
+    margin-bottom: 10rem;
+  }
+}

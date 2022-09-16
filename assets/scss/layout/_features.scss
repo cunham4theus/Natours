@@ -6,17 +6,18 @@
   justify-content: center;
   align-items: center;
   padding: 24rem 0;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url(/assets/img/nat-7.jpg);
+  background-image: 
+  // linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.8),
+  //     rgba($color-primary-dark, 0.8)
+  //   ),
+    url(/assets/img/natureza-1.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
   clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
-
+  
 
   &__cards {
     display: flex;
@@ -33,11 +34,11 @@
       text-align: center;
       max-width: 24rem;
       height: 30rem;
-      background-color: rgba($color-grey-light-2, .84);
+      background-color: rgba($color-grey-light-2, 0.84);
       padding: 2rem;
       transition: ease-in 0.2s;
       border-radius: 2px;
-      box-shadow: 1px 1px 40px $color-grey-dark;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.35);
       
 
       &:hover {

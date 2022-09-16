@@ -12,9 +12,25 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-
   margin-bottom: 6rem;
-  text-align: initial;
+  text-align: center;
+  position: relative;
+  text-shadow: 1px 1px $color-black;
+
+  &::after {
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(10px);
+    opacity: 0.5;
+    z-index: -1;
+    border: 20px solid $color-black;
+  }
 
   &--main {
     display: block;
@@ -35,7 +51,7 @@ body {
   &--sub {
     display: block;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.27rem;
     animation: moveInRight 1s ease-out;
   }
