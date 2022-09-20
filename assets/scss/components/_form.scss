@@ -1,0 +1,97 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.form {
+  display: grid;
+  width: 70%;
+
+
+  &__input {
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 1);
+    border: 1px solid rgba($color-primary, 0.5);
+    transition: all ease-in 0.25s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.4rem 0 rgba($color-primary, 0.8),
+        0 1rem 3rem rgba($color-grey-dark-3, 0.2);
+      border-radius: 0 0 2px 2px;
+    }
+
+    &:focus:invalid {
+      color: $color-secondary-dark;
+      border: 1px solid rgba($color-secondary-dark, .7);
+      box-shadow: 0 0.4rem 0 rgba($color-secondary-dark, 1), 0 1rem 3rem rgba($color-grey-dark-3, 0.2);
+    }
+
+    &::placeholder {
+      color: $color-grey-dark-2
+    }
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .4rem;
+    display: block;
+    transition: all .3s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+   width: 49%;
+   display: inline-block;   
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    padding-left: 4.5rem;
+    position: relative;
+  }
+
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0-.5rem;
+    left: 0;
+
+    &::after {
+      content: "";
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}

@@ -3,22 +3,39 @@
 @mixin font-title-description {
   font-size: $default-font-size;
   text-transform: uppercase;
-  color: $color-grey-dark-2;
+  color: $color-grey-dark;
 }
 @mixin font-text-description {
   font-size: $default-font-size;
-  color: $color-grey-dark-2;
+  color: $color-grey-dark;
   max-width: 75ch;
- 
 }
 @mixin section-link {
-  color: $color-primary-dark;
+  color: $color-primary;
   display: flex;
-  padding: 1rem 0.3rem;
-  border-bottom: 1px solid $color-primary-dark;
+  padding: 0 0.5rem 0.5rem 1rem;
+  border-bottom: 1px solid $color-primary;
+  border-radius: 3px;
   max-width: max-content;
   font-size: $default-font-size;
   text-decoration: none;
+  font-weight: 400;
+  transform: scale(1);
+  transition: all ease .3s;
+  height: 3.2rem;
+  
+
+  &:hover {
+    color: $color-grey-light-1;
+    background-image: linear-gradient(
+      to left top,
+      rgb($color-primary-dark, 1),
+      rgb($color-primary-light, 1)
+    );
+    transform: scale(1.1);
+    box-shadow: 0 2px 10px rgba($color-black, .4);
+    
+  }
 }
 @mixin container-size {
   max-width: 160rem;
@@ -28,7 +45,7 @@
   box-shadow: 0px 15px 45px $color-grey-dark-2;
 }
 @mixin img-hover {
-  outline: 2rem solid $color-primary;
+  outline: 1.2rem solid $color-primary;
   outline-offset: 2rem;
   border-radius: 0.2rem;
   z-index: 1;

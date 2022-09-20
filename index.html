@@ -12,7 +12,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/icon-fonts.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="shortcut icon" href="./assets/img/MC-black.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
   <title>Natorous | Passeios emocionantes para pessoas aventureiras</title>
 
@@ -34,7 +34,7 @@
 
   <main>
     <div class="about-bg">
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__title">
           <h2 class="heading-secondary">Passeios emocionantes para pessoas aventureiras</h2>
         </div>
@@ -44,7 +44,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.</p>
             <h3>Viva aventuras que jamais viveu.</h3>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.</p>
-            <a href="#">Saiba mais →</a>
+            <a href="#">Saiba mais &rarr;</a>
           </div>
         </div>
         <div class="about__images">
@@ -109,7 +109,7 @@
           <div class="card__side card__side--back card__side--back-1">
             <div class="card__cta">
               <div class="card__price-box">
-                <p class="card__price-only">Only</p>
+                <p class="card__price-only">Por Apenas</p>
                 <p class="card__price-value">R$1459</p>
               </div>
               <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
@@ -140,7 +140,7 @@
           <div class="card__side card__side--back card__side--back-1">
             <div class="card__cta">
               <div class="card__price-box">
-                <p class="card__price-only">Only</p>
+                <p class="card__price-only">Por Apenas</p>
                 <p class="card__price-value">R$2049</p>
               </div>
               <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
@@ -171,7 +171,7 @@
           <div class="card__side card__side--back card__side--back-1">
             <div class="card__cta">
               <div class="card__price-box">
-                <p class="card__price-only">Only</p>
+                <p class="card__price-only"> Por Apenas</p>
                 <p class="card__price-value">R$2999</p>
               </div>
               <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
@@ -183,8 +183,107 @@
       </div>
       <a href="#" class="btn btn--green btn--animated">Veja todos</a>
     </section>
+    <section class="stories">
+      <div class="bg-video">
+        <video class="bg-video__content" src="/assets/img/video-2.mp4" type="video/mp4" autoplay muted loop>
+          Vídeo não suportado.
+        </video>
+      </div>
+      <div class="stories__title">
+        <h2 class="heading-secondary">
+          fazemos as pessoas felizes de verdade</h2>
+      </div>
 
+      <div class="story">
+        <figure class="story__shape">
+          <img src="/assets/img/nat-9.jpg" alt="">
+          <figcaption class="story__caption">Clark Kent</figcaption>
+
+        </figure>
+        <div class="story__text">
+          <h3>
+            Tive a melhor semana de todas com a minha família!!!
+          </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere eum, incidunt qui, rerum harum ullam ratione accusantium sit iure aliquam molestiae fugiat? Magnam tenetur totam obcaecati distinctio nihil harum!
+          </p>
+        </div>
+      </div>
+
+      <div class="story">
+        <figure class="story__shape">
+          <img src="/assets/img/person-2.jpg" alt="">
+          <figcaption class="story__caption">Natasha Romanoff</figcaption>
+        </figure>
+        <div class="story__text">
+          <h3>
+            Wow!!! Minha vida mudou completamente!
+          </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sapiente a adipisci. Non, consequuntur, alias saepe reprehenderit totam, est aliquid nostrum explicabo fuga deleniti nisi necessitatibus. Eligendi optio mollitia neque.
+          </p>
+        </div>
+      </div>
+
+      <a href="#">Veja todas &rarr;</a>
+    </section>
+
+    <section class="book">
+      <div class="book__container">
+        <div class="book__container__bg">
+          <div class="book__container__form">
+            <h2 class="heading-secondary">Reserve agora!</h2>
+            <form action="#" class="form">
+              <div class="form__group">
+                <input type="text" class="form__input" placeholder="Nome Completo" id="name" required>
+                <label for="name" class="form__label">Nome Completo</label>
+              </div>
+              <div class="form__group">
+                <input type="email" class="form__input" placeholder="Email" id="email" required>
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="form__group">
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="small" name="size">
+                  <label for="small" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Small tour group
+                  </label>
+                </div>
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="large" name="size">
+                  <label for="large" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Large tour group
+                  </label>
+                </div>
+              </div>
+              <div class="form__group">
+                <button href="#" class="btn btn--green btn--animated">Enviar<span>&rarr;</span> </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <img src="./assets/img/Logo-Large-svg.svg" alt="Full logo" class="footer__logo" width="340" height="280">
+    </div>
+    <div class="footer__navigation">
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Contact US</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+      </ul>
+    </div>
+    <div class="footer__copyright">
+      Código feito por <a href="#" class="footer__link">Matheus Brenner</a> no curso <a href="#" class="footer__link">Advanced CSS and SASS</a>, criado por <a href="#" class="footer__link">Jonas Schmedtmann</a>. NATOURS Copyright &copy; Jonas Schmedtmann, créditos para Matheus Brenner.
+    </div>
+  </footer>
 </body>
 
 </html>

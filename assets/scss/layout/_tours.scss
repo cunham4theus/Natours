@@ -13,10 +13,13 @@
   }
 
   &__cards {    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 6rem;
     @include container-size;
     margin-bottom: 10rem;
+    max-width: 120rem;
+   
   }
 }

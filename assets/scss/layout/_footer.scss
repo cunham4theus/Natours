@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.footer {
+
+ &__logo-box {
+
+  img {
+    border: 1px solid red;
+  }
+ }
+}

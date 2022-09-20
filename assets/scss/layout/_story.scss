@@ -1,0 +1,20 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.stories {  
+  padding: 15rem 0;
+
+  position: relative;
+
+ 
+  &__title {
+    margin-bottom: 10rem;
+  }
+
+  a {
+    display: block;
+    @include section-link;
+    margin: 0 auto;
+
+  }
+}
