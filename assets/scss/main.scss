@@ -12,6 +12,7 @@
 @use "components/storyContainer";
 @use "components/bg-video";
 @use "components/form";
+@use "components/bar";
 
 @use "layout/header";
 @use "layout/features";
@@ -19,7 +20,8 @@
 @use "layout/tours";
 @use "layout/story";
 @use "layout/book";
-@use "layout/footer"
+@use "layout/footer";
+@use "layout/navigation";
 
 
 

@@ -1,0 +1,20 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $color-grey-light-2;
+  box-shadow: inset 1px 1px 4px rgba($color-grey-dark, .2);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient($color-primary-dark, $color-primary-light);
+  box-shadow: inset 1px 1px 2px $color-white;
+  border-radius: 1px;
+  
+}
+

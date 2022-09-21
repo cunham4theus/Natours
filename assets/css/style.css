@@ -182,12 +182,12 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn--white {
-  background-color: #fff;
+  background-image: linear-gradient(to right bottom, #fff, #eee);
   color: #777;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 .btn--white::after {
-  background-color: #fff;
+  background-image: linear-gradient(to right bottom, #fff, #eee);
 }
 .btn--green {
   background-image: linear-gradient(to right bottom, #4fa6ec, #bb02c2);
@@ -447,13 +447,13 @@ body {
 }
 .form__input:focus {
   outline: none;
-  box-shadow: 0 0.4rem 0 rgba(178, 94, 226, 0.8), 0 1rem 3rem rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0.4rem 0 rgba(178, 94, 226, 0.8), 0 1rem 3rem rgba(34, 34, 34, 0.2);
   border-radius: 0 0 2px 2px;
 }
 .form__input:focus:invalid {
   color: #ff0000;
   border: 1px solid rgba(255, 0, 0, 0.7);
-  box-shadow: 0 0.4rem 0 red, 0 1rem 3rem rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0.4rem 0 red, 0 1rem 3rem rgba(34, 34, 34, 0.2);
 }
 .form__input::placeholder {
   color: #999;
@@ -510,6 +510,22 @@ body {
 }
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+  box-shadow: inset 1px 1px 4px rgba(119, 119, 119, 0.2);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#bb02c2, #4fa6ec);
+  box-shadow: inset 1px 1px 2px #fff;
+  border-radius: 1px;
 }
 
 .header {
@@ -599,6 +615,7 @@ body {
   margin-top: -20rem;
   padding-top: 20rem;
   box-shadow: 0 400px 0 #f7f7f7;
+  margin-bottom: 6rem;
 }
 .about-bg .about {
   display: grid;
@@ -797,8 +814,131 @@ body {
   right: 24px;
 }
 
-.footer__logo-box img {
-  border: 1px solid red;
+.footer {
+  background-color: #222;
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start center;
+  font-size: 1.2rem;
+  color: #999;
+}
+.footer__logo-box {
+  grid-column: 1/-1;
+  margin-bottom: 8rem;
+}
+.footer__logo {
+  width: 20rem;
+  height: auto;
+}
+.footer__navigation {
+  border-top: 1px solid rgba(238, 238, 238, 0.5);
+  padding: 2rem 0;
+  max-width: 45rem;
+}
+.footer__list {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer__link {
+  transition: all ease-in 0.2s;
+}
+.footer__link:link, .footer__link:visited {
+  background-color: #222;
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.footer__link:hover, .footer__link:active {
+  color: #be7be6;
+  box-shadow: 0 0.6rem 2rem black;
+  transform: rotate(5deg);
+}
+.footer__copyright {
+  border-top: 1px solid rgba(238, 238, 238, 0.5);
+  padding: 2rem 0;
+  max-width: 45rem;
+}
+
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.navigation__background {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10%;
+  position: fixed;
+  top: 8rem;
+  right: 8rem;
+  background-image: linear-gradient(to left bottom, #bb02c2 25%, #4fa6ec 100%);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(1, -0.35, 1, 1);
+  box-shadow: 1px 1px 2rem #000;
+}
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateX(400px);
+}
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding-right: 3rem;
+  margin-left: 3rem;
+}
+.navigation__item {
+  margin: 1rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  text-shadow: -5px 5px 1.2rem #222;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 270%;
+  transition: all ease-in 0.4s;
+}
+.navigation__link:link span, .navigation__link:visited span {
+  margin-right: 1rem;
+  display: inline-block;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #222;
+  transform: translate(1rem);
+  text-shadow: none;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scaleY(80) scale(25);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=style.css.map */

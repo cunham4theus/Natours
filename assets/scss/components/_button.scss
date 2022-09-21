@@ -40,12 +40,20 @@
   }
 
   &--white {
-    background-color: $color-white;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-white,
+      $color-grey-light-2
+    );
     color: $color-grey-dark;
     box-shadow: 0 2px 10px rgba($color-black, 0.45);
 
     &::after {
-      background-color: $color-white;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-white,
+        $color-grey-light-2
+      );
     }
   }
 

@@ -2,11 +2,60 @@
 @use '../abstracts/variables' as *;
 
 .footer {
+  background-color: $color-grey-dark-3;
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start center;
+  font-size: 1.2rem;
+  color: $color-grey-dark-2;
 
- &__logo-box {
-
-  img {
-    border: 1px solid red;
+  &__logo-box {
+    grid-column: 1/-1;
+    margin-bottom: 8rem;
   }
- }
+
+  &__logo {
+    width: 20rem;
+    height: auto;
+  }
+
+  &__navigation {
+    border-top: 1px solid rgba($color-grey-light-2, 0.5);
+    padding: 2rem 0;
+    max-width: 45rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    transition: all ease-in 0.2s;
+    &:link,
+    &:visited {
+      background-color: $color-grey-dark-3;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary-light;
+      box-shadow: 0 0.6rem 2rem rgba($color-black, 1);
+      transform: rotate(5deg);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid rgba($color-grey-light-2, 0.5);
+    padding: 2rem 0;
+    max-width: 45rem;
+  }
 }
