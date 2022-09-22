@@ -99,7 +99,7 @@ body {
   top: 0;
   left: 0;
   filter: blur(10px);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: -1;
   border: 20px solid #000;
 }
@@ -597,6 +597,10 @@ body {
   font-size: clamp(2rem, 3vw, 3rem);
   max-width: max-content;
 }
+.popup__content__description h2:hover {
+  transform: skewY(0) skewX(0) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 .popup__content__description h3 {
   font-size: clamp(1.4rem, 1.8vw, 1.6rem);
   text-transform: uppercase;
@@ -626,7 +630,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 95vh;
-  background-image: url(../img/natureza-4.jpg);
+  background-image: url(../img/nat-4.jpg);
   background-size: cover;
   background-position: bottom;
   background-blend-mode: color;
@@ -640,7 +644,7 @@ body {
   left: 4rem;
 }
 .header__logo {
-  height: 3.5rem;
+  height: 4.5rem;
 }
 .header__text-box {
   display: grid;
