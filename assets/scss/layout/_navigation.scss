@@ -2,7 +2,6 @@
 @use '../abstracts/variables' as *;
 
 .navigation {
-  
   &__checkbox {
     display: none;
   }
@@ -17,6 +16,8 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, $alpha: 0.1);
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -57,7 +58,6 @@
     height: 100vh;
     padding-right: 3rem;
     margin-left: 3rem;
-   
   }
 
   &__item {
@@ -98,6 +98,7 @@
     }
   }
 
+  // !FUNCTION
   &__checkbox:checked ~ &__background {
     transform: scaleY(80) scale(25);
   }
@@ -105,5 +106,73 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  // !ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2.5px;
+      background-image: linear-gradient(
+        to left top,
+        rgb($color-primary-dark, 1),
+        rgb($color-primary-light, 1)
+      );
+      display: inline-block;
+    
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      top: -1rem;     
+      background-color: linear-gradient(
+        to left top,
+        rgb($color-primary-dark, 1),
+        rgb($color-primary-light, 1)
+      );
+    }
+
+    &::after {
+      top: 1rem;    
+      background-color: linear-gradient(
+        to left top,
+        rgb($color-primary-dark, 1),
+        rgb($color-primary-light, 1)
+      );  
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-image: none;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
