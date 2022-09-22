@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use "../abstracts/mixins" as *;
 
 *,
 *::after,
@@ -27,11 +28,12 @@ ul {
 }
 html {
   font-size: 62.5%;
+  @include respond-phone {
+    font-size: 50%;
+  }
 }
 body {
   box-sizing: border-box;
 }
-input {
-  
-  
-}
+
+
