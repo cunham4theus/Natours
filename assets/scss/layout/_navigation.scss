@@ -39,6 +39,7 @@
 
   &__nav {
     height: 100vh;
+    max-width: 47rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -46,7 +47,7 @@
     opacity: 0;
     transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: translateX(400px);
-  }
+   }
 
   &__list {
     display: flex;
@@ -100,7 +101,7 @@
 
   // !FUNCTION
   &__checkbox:checked ~ &__background {
-    transform: scaleY(80) scale(25);
+    transform: scaleY(80) scale(25.5);
   }
 
   &__checkbox:checked ~ &__nav {
@@ -124,7 +125,6 @@
         rgb($color-primary-light, 1)
       );
       display: inline-block;
-    
     }
 
     &::before,
@@ -132,11 +132,11 @@
       content: '';
       position: absolute;
       left: 0;
-      transition: all 0.3s;
+      transition: all 0.2s;
     }
 
     &::before {
-      top: -1rem;     
+      top: -1rem;
       background-color: linear-gradient(
         to left top,
         rgb($color-primary-dark, 1),
@@ -145,12 +145,12 @@
     }
 
     &::after {
-      top: 1rem;    
+      top: 1rem;
       background-color: linear-gradient(
         to left top,
         rgb($color-primary-dark, 1),
         rgb($color-primary-light, 1)
-      );  
+      );
     }
   }
 
@@ -167,12 +167,12 @@
   }
 
   &__checkbox:checked + &__button &__icon::before {
-    transform: rotate(135deg);
+    transform: rotate(134deg);
     top: 0;
   }
 
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
-    transform: rotate(-135deg);
+    transform: rotate(-134deg);
   }
 }

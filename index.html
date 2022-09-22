@@ -47,7 +47,7 @@
         <span class="heading-primary--main">Ao ar livre</span>
         <span class="heading-primary--sub">É onde a vida acontece</span>
       </h1>
-      <a href="#" class="btn btn--white btn--animated">Veja nossos guias</a>
+      <a href="#section-tours" class="btn btn--white btn--animated">Veja nossos guias</a>
     </div>
   </header>
 
@@ -95,13 +95,13 @@
 
         <div class="features__cards__box">
           <i class="features__cards__box__icon icon-basic-heart"></i>
-          <h3>Viva para uma vida mais saldável</h3>
+          <h3>Viva para uma vida mais saudável</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo quisquam eaque fuga, nulla modi.</p>
         </div>
       </div>
     </section>
 
-    <section class="tours">
+    <section class="tours" id="section-tours">
       <h2 class="heading-secondary">pacotes populares</h2>
       <div class="tours__cards">
 
@@ -131,7 +131,7 @@
                 <p class="card__price-only">Por Apenas</p>
                 <p class="card__price-value">R$1459</p>
               </div>
-              <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
+              <a href="#popup" class="btn btn--white btn--animated">Reserve agora!</a>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@
                 <p class="card__price-only">Por Apenas</p>
                 <p class="card__price-value">R$2049</p>
               </div>
-              <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
+              <a href="#popup" class="btn btn--white btn--animated">Reserve agora!</a>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@
                 <p class="card__price-only"> Por Apenas</p>
                 <p class="card__price-value">R$2999</p>
               </div>
-              <a href="#" class="btn btn--white btn--animated">Reserve agora!</a>
+              <a href="#popup" class="btn btn--white btn--animated">Reserve agora!</a>
             </div>
           </div>
         </div>
@@ -303,6 +303,23 @@
       Código feito por <a href="#" class="footer__link">Matheus Brenner</a> no curso <a href="#" class="footer__link">Advanced CSS and SASS</a>, criado por <a href="#" class="footer__link">Jonas Schmedtmann</a>. NATOURS Copyright &copy; Jonas Schmedtmann, créditos para Matheus Brenner.
     </div>
   </footer>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__content__imagem">
+        <img src="./assets/img/hero.jpg" alt="">
+        <img src="./assets/img/nat-5.jpg" alt="">
+      </div>
+      
+      <div class="popup__content__description">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <h2 class="popup__title heading-secondary">pacotes populares</h2>
+        <h3>Viva para uma vida mais saudável</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tempora consequuntur sequi! Accusantium reprehenderit illo nisi inventore, vel commodi, laudantium temporibus repellat pariatur voluptates natus ipsa, explicabo omnis dolores totam? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button href="#" class="btn btn--green btn--animated">Reserve agora</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
