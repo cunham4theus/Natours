@@ -1,3 +1,16 @@
+@charset "UTF-8";
+/* 
+-----------------------------------------------. 
+!argumento do $breakpoint                      | 
+...............................................| 
+320px - 600px  mobile phone = phone            |
+600px - 900px tablet-portrait = tab-port       |
+900px - 1200px tablet-landscape = tab-land     |
+1200px - 1800px tamanho normal do browser      |
+1800px + big desktop = big-desktop      
+xxpx/16px = xxem       |
+-----------------------------------------------°
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -67,9 +80,24 @@ ul {
 html {
   font-size: 62.5%;
 }
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   html {
     font-size: 50%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 112.5em) {
+  html {
+    font-size: 80%;
   }
 }
 

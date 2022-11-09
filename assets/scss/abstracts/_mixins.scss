@@ -21,9 +21,8 @@
   text-decoration: none;
   font-weight: 400;
   transform: scale(1);
-  transition: all ease .3s;
+  transition: all ease 0.3s;
   height: 3.2rem;
-  
 
   &:hover {
     color: $color-grey-light-1;
@@ -33,8 +32,7 @@
       rgb($color-primary-light, 1)
     );
     transform: scale(1.1);
-    box-shadow: 0 2px 10px rgba($color-black, .4);
-    
+    box-shadow: 0 2px 10px rgba($color-black, 0.4);
   }
 }
 @mixin container-size {
@@ -53,15 +51,42 @@
   transition: all ease-in-out 0.3s;
 }
 
-// !MÉDIA 
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content
-  };
-}
+// !MÉDIA
+/* 
+-----------------------------------------------. 
+!argumento do $breakpoint                      | 
+...............................................| 
+320px - 600px  mobile phone = phone            |
+600px - 900px tablet-portrait = tab-port       |
+900px - 1200px tablet-landscape = tab-land     |
+1200px - 1800px tamanho normal do browser      |
+1800px + big desktop = big-desktop      
+xxpx/16px = xxem       |
+-----------------------------------------------°
+*/
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    
+    @media (max-width: 37.5em) /* 600px/16px */{
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) /* 900px/16px */{
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) /* 1200px/16px */{
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (max-width: 112.5em) /* 1800px/16px */{
+      @content;
+    }
   }
 }
