@@ -6,12 +6,16 @@
   margin: 0 auto;
   box-shadow: 0 2rem 6rem rgba($color-black, .2);
   background-color: rgba($color-white, 0.6);
-  border-radius: 3px;
+  border-radius: .3rem;
   padding: 6rem 8rem;
   gap: 2rem;
   max-width: 100rem;
-  transform: skew(-15deg);
+  
   margin-bottom: 8rem;
+
+  @include respond(phone) {
+    transform: skew(-15deg);
+  }
 
   &__shape {
     background-size: cover;
@@ -21,7 +25,10 @@
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-    transform: skew(15deg);
+    
+    @include respond(phone) {
+      transform: skew(15deg);
+    }
 
     img {
       width: 15rem;
@@ -34,9 +41,11 @@
     }
   }
 
-  &__text {
-    transform: skew(15deg);
+  &__text {    
     text-align: justify;
+    @include respond(phone) {
+      transform: skew(15deg);
+    }
     h3 {
       @include font-title-description;
       margin-bottom: 2rem;

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use "../abstracts/mixins" as *;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -15,7 +16,7 @@ body {
   margin-bottom: 6rem;
   text-align: center;
   position: relative;
-  text-shadow: 1px 1px $color-black;
+  text-shadow: .1rem .1rem $color-black;
 
   &::after {
     content: '';
@@ -29,7 +30,7 @@ body {
     filter: blur(10px);
     opacity: 0.3;
     z-index: -1;
-    border: 20px solid $color-black;
+    border: 2rem solid $color-black;
   }
 
   &--main {
@@ -41,6 +42,8 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+   
 
     /*
       animation-delay: 3s;

@@ -12,11 +12,14 @@
   visibility: hidden;
   z-index: 99999;
   // transition: all 0.3s;
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
   transform: translateY(100vh);
   transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 0 1rem;
+
+ 
 
   &:target {
     opacity: 1;
@@ -25,8 +28,6 @@
   }
 
   &__close {
-    
-
     &:link,
     &:visited {
       color: $color-grey-dark;
@@ -38,7 +39,7 @@
       text-decoration: none;
       display: block;
       transition: all 0.3s;
-      border: 3px solid $color-grey-dark;
+      border: 0.3rem solid $color-grey-dark;
       border-radius: 50%;
       line-height: 3.2rem;
       height: 4rem;
@@ -49,7 +50,7 @@
 
     &:hover {
       color: $color-primary;
-      border: 3px solid $color-primary;
+      border: 0.3rem solid $color-primary;
     }
   }
 
@@ -60,32 +61,32 @@
     gap: 1.5rem;
     max-width: 90rem;
     position: relative;
-    border-radius: 6px;
-    
-    
+    border-radius: 0.6rem;
 
     &__imagem {
       max-width: 30rem;
-      display: flex;
+      display: none;
       flex-direction: column;
       object-fit: cover;
       height: 100%;
       min-width: 31rem;
-     
+
+      @include respond(tab-port) {
+        display: flex;
+      }
 
       img:not(:last-child) {
-        border-radius: 5px 0 0 0;
+        border-radius: 0.5rem 0 0 0;
       }
 
       img:nth-child(even) {
-        border-radius: 0 0 0 5px;
+        border-radius: 0 0 0 0.5rem;
       }
     }
     &__description {
       display: grid;
       padding: clamp(1rem, 2vw, 2rem);
       gap: clamp(1rem, 1.5vw, 1.5rem);
-    
 
       h2 {
         display: flex;
@@ -98,25 +99,26 @@
           transform: skewY(0) skewX(0) scale(1.1);
           text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
         }
-       
       }
 
       h3 {
         @include font-title-description;
         font-size: 1.6rem;
-      
       }
 
       p {
         font-size: 1.4rem;
-        @include font-text-description;
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        column-rule: 1px solid $color-grey-dark-2;
-        column-gap: 4rem;
+        @include font-text-description;       
         margin-bottom: 2rem;
         hyphens: auto;
+
+        @include respond(tab-port) {
+          -webkit-column-count: 2;
+          -moz-column-count: 2;
+          column-count: 2;
+          column-rule: 0.1rem solid $color-grey-dark-2;
+          column-gap: 4rem;
+        }
       }
 
       .btn {

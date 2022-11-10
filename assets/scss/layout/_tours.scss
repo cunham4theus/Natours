@@ -7,7 +7,7 @@
   margin-top: -25rem;
   padding-top: 30rem;
   padding-bottom: 12rem;
-
+  height: 100%;
   h2 {
     margin-bottom: 12rem;
   }
@@ -16,10 +16,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 6rem;
+    gap: 40rem;
     @include container-size;
-    margin-bottom: 10rem;
+    margin-bottom: 50rem;
     max-width: 120rem;
-   
+    
+
+    @include respond(tab-land) {
+      gap: 6rem;
+      margin-bottom: 10rem;
+    }
   }
 }

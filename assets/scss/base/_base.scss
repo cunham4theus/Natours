@@ -27,26 +27,19 @@ ul {
   list-style: none;
 }
 html {
-  font-size: 62.5%;
+  font-size: 47.5%;
+  scroll-behavior: smooth;
 
-  // @include respond-phone {
-  //   font-size: 50%;
-  // }
-
-  @include respond(phone) {
+  @include respond(tab-port) {
     font-size: 50%;
   }
 
-  @include respond(tab-port) {
-    font-size: 60%;
-  }
-
   @include respond(tab-land) {
-    font-size: 70%;
+    font-size: 56.2%;
   }
 
   @include respond(big-desktop) {
-    font-size: 80%;
+    font-size: 75%;
   }
 }
 body {

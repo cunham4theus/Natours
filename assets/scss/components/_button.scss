@@ -3,7 +3,6 @@
 .btn {
   display: flex;
   justify-self: center;
-  
 
   &,
   &:link,
@@ -23,7 +22,7 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
     &::after {
@@ -35,7 +34,7 @@
   &:active,
   &:focus {
     outline: none;
-    transform: translateY(-1px);
+    transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
@@ -46,7 +45,7 @@
       $color-grey-light-2
     );
     color: $color-grey-dark;
-    box-shadow: 0 2px 10px rgba($color-black, 0.45);
+    box-shadow: 0 0.2rem 1rem rgba($color-black, 0.45);
 
     &::after {
       background-image: linear-gradient(
@@ -59,12 +58,12 @@
 
   &--green {
     background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-      );
+      to right bottom,
+      $color-primary-light,
+      $color-primary-dark
+    );
     color: $color-white;
-    box-shadow: 0 2px 10px rgba($color-black, 0.45);
+    box-shadow: 0 0.2rem 1rem rgba($color-black, 0.45);
 
     &::after {
       background-color: $color-primary;
@@ -97,8 +96,8 @@
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
-    padding: 3px;
+    border-bottom: 0.1rem solid $color-primary;
+    padding: 0.3rem;
     transition: all 0.2s;
   }
 
