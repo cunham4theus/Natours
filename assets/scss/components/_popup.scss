@@ -12,20 +12,11 @@
   visibility: hidden;
   z-index: 99999;
   // transition: all 0.3s;
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(100vh);
-  transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 2.47s cubic-bezier(0.1, -0.55, 0.265, 1.55);
   padding: 0 1rem;
-
- 
-
-  &:target {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 
   &__close {
     &:link,
@@ -62,6 +53,8 @@
     max-width: 90rem;
     position: relative;
     border-radius: 0.6rem;
+    transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translateY(100rem);
 
     &__imagem {
       max-width: 30rem;
@@ -108,7 +101,7 @@
 
       p {
         font-size: 1.4rem;
-        @include font-text-description;       
+        @include font-text-description;
         margin-bottom: 2rem;
         hyphens: auto;
 
@@ -125,6 +118,14 @@
         place-self: flex-start;
         font-size: 1.8rem;
       }
+    }
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+
+    .popup__content {
+      transform: translateY(0);
     }
   }
 }

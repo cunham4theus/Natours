@@ -636,14 +636,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(100vh);
-  transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 2.47s cubic-bezier(0.1, -0.55, 0.265, 1.55);
   padding: 0 1rem;
-}
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 .popup__close:link, .popup__close:visited {
   color: #777;
@@ -675,6 +669,8 @@ body {
   max-width: 90rem;
   position: relative;
   border-radius: 0.6rem;
+  transition: all 1.47s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(100rem);
 }
 .popup__content__imagem {
   max-width: 30rem;
@@ -737,6 +733,13 @@ body {
 .popup__content__description .btn {
   place-self: flex-start;
   font-size: 1.8rem;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  transform: translateY(0);
 }
 
 .header {
